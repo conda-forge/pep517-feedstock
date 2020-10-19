@@ -1,5 +1,5 @@
 {% set name = "pep517" %}
-{% set version = "0.8.2" %}
+{% set version = "0.9.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8e6199cf1288d48a0c44057f112acf18aa5ebabbf73faa242f598fbe145ba29e
+  sha256: aeb78601f2d1aa461960b43add204cc7955667687fbcf9cdb5170f00556f117f
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
