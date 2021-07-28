@@ -21,8 +21,8 @@ requirements:
     - flit-core >=2,<3
   run:
     - python
-    - importlib-metadata  # [py<38]
-    - toml
+    - importlib_metadata  # [py<38]
+    - tomli  # [py>=36]
     - zipp  # [py<38]
 
 test:
