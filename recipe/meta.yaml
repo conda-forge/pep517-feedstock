@@ -1,5 +1,5 @@
 {% set name = "pep517" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e1ba5dffa3a131387979a68ff3e391ac7d645be409216b961bc2efe6468ab0b2
+  sha256: e83754192fc0a12de38befdc19d7fe4dee2558a6f9a182adf1a8c16b489d3b4c
 
 build:
   number: 0
