@@ -25,7 +25,7 @@ requirements:
   run:
     - python
     - importlib_metadata  # [py<38]
-    - tomli  # [py>=36]
+    - tomli >=1.1.0  # [py<311]
     - zipp  # [py<38]
 
 test:
