@@ -11,29 +11,24 @@ source:
   sha256: 931378d93d11b298cf511dd634cf5ea4cb249a28ef84160b3247ee9afb4e8ab0
 
 build:
-  number: 2
+  noarch: python
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.8
     - pip
     - flit-core >=2,<3
   run:
-    - python
-    - importlib_metadata  # [py<38]
-    - tomli  # [py>=36]
-    - zipp  # [py<38]
+    - python >=3.8
+    - tomli
 
 test:
   imports:
     - pep517
   commands:
-    # temporarily skipping pip check on win and pypy build because of bizarre tqdm issue
-    - pip check  # [not (win and python_impl == 'pypy')]
+    - pip check
   requires:
     - pip
 
